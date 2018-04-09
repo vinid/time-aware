@@ -14,7 +14,7 @@ Experiments were run using the following tools:
 Models can be downloaded from [here](http://inside.disco.unimib.it/download/federico/time-aware/), the tar file contains:
 
 + The model for years entites
-+ The skip-gram model for years
++ The skip-gram model for entities
 + The baseline model (used in the experiments)
 
 Gold Standards/Dataset used in the experiments are in the respective folder of this repository
