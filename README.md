@@ -23,7 +23,7 @@ Gold Standards/Dataset used in the experiments are in the respective folder of t
 
 In the time_aware.py script you can find the main functions described in the paper. 
 
-### Helper Function
+### Helper Functions
 
 in the utilities folder you can find two scripts that can be used to generate the data you need. The
  `temporal_data_generation.py` allows you to extract the temporal descriptions from Wikipedia while the 
