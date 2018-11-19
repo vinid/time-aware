@@ -1,4 +1,3 @@
-from collections import Counter
 import os
 import numpy as np
 import argparse
@@ -6,17 +5,22 @@ from gensim.models import word2vec
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('-embedded_model_location', '--embeded', help="Location of the embedded model you want to learn temporal embeddings from", type=str)
-    parser.add_argument('-dimension_of_the_embeddings', '--dim', help="Dimensionality of the previous embedding", type=str)
-    parser.add_argument('-year_embeddings', '--em', help="Output location for the embedded years", type=str)
-    parser.add_argument('-year_annotated', '--an', help="Location Folder of the annotated years", type=str)
+    parser.add_argument('--embedded_model_location', '-embedded',
+                        help="Location of the embedded model you want to learn temporal embeddings from", type=str,
+                        required=True)
+    parser.add_argument('--dimension_of_the_embeddings', '-dim', help="Dimensionality of the previous embedding",
+                        type=str)
+    parser.add_argument('--year_embeddings', '-em', help="Output location for the embedded years", type=str,
+                        default="years_embeddings.txt")
+    parser.add_argument('--year_annotated', '-an', help="Location Folder of the annotated years", type=str,
+                        default="years_annotated/")
 
     args = parser.parse_args()
 
-    folder = args.an
+    folder = args.year_annotated
     model_e = word2vec.Word2Vec.load(args.embedded_model_location)
 
-    with open(args.em, "w") as text_file:
+    with open(args.year_embeddings, "w") as text_file:
         num_files = len(os.listdir(folder))
         dimensions = args.dimension_of_the_embeddings
 
