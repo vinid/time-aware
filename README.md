@@ -11,7 +11,7 @@ Experiments were run using the following tools:
 
 ## Data
 
-Models can be downloaded from [here](http://inside.disco.unimib.it/download/federico/time-aware/), the tar file contains:
+Models can be downloaded from [here](https://drive.google.com/drive/folders/1kggYWYJpjGy89384DoEXIDe2vWUcPv8s?usp=sharing), the tar file contains:
 
 + The model for years entites
 + The skip-gram model for entities
